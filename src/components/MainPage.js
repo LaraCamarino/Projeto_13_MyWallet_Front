@@ -29,7 +29,7 @@ export default function MainPage() {
         promise.then((response) => {
             setAllTransactions(response.data);
         });
-        promise.catch((err) => alert(err.response.data.message));
+        promise.catch((err) => alert(err.response.data));
     }
 
     useEffect(() => getAllTransactions(), []);
@@ -38,7 +38,7 @@ export default function MainPage() {
         if (window.confirm("Você deseja realmente excluir este registro?")) {
             const promise = axios.delete(`https://project-13-my-wallet.herokuapp.com/transactions/${id}`, config);
             promise.then(() => getAllTransactions());
-            promise.catch((err) => alert(err.response.data.message));
+            promise.catch((err) => alert(err.response.data));
         }
     }
 

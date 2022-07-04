@@ -53,7 +53,7 @@ export default function NewWithdrawal() {
             navigate("/main-page");
         });
         promise.catch(err => {
-            alert(err.response.data.message);
+            alert(err.response.data);
             setTransaction({
                 value: "",
                 description: "",

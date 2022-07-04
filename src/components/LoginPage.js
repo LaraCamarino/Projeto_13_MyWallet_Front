@@ -33,7 +33,7 @@ export default function LoginPage() {
         })
 
         promise.catch(err => {
-            alert(err.response.data.message);
+            alert(err.response.data);
             setLogin({
                 email: "",
                 password: ""
