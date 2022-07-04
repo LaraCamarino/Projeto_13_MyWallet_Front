@@ -14,7 +14,7 @@ export default function MainPage() {
 
     const { userData } = useContext(UserContext);
 
-    const URL = "http://localhost:5000/transactions";
+    const URL = "https://project-13-my-wallet.herokuapp.com/transactions";
     const config = {
         headers: {
             "Authorization": `Bearer ${userData.token}`
@@ -36,7 +36,7 @@ export default function MainPage() {
 
     function deleteTransaction(id) {
         if (window.confirm("Você deseja realmente excluir este registro?")) {
-            const promise = axios.delete(`http://localhost:5000/transactions/${id}`, config);
+            const promise = axios.delete(`https://project-13-my-wallet.herokuapp.com/transactions/${id}`, config);
             promise.then(() => getAllTransactions());
             promise.catch((err) => alert(err.response.data.message));
         }

@@ -39,7 +39,7 @@ export default function NewDeposit() {
     }
 
     function sendForm() {
-        const URL = "http://localhost:5000/transactions";
+        const URL = "https://project-13-my-wallet.herokuapp.com/transactions";
         const config = {
             headers: {
                 "Authorization": `Bearer ${userData.token}`

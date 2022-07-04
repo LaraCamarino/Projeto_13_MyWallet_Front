@@ -18,7 +18,7 @@ export default function SignUpPage() {
     });
 
     function signUp() {
-        const URL = "http://localhost:5000/sign-up";
+        const URL = "https://project-13-my-wallet.herokuapp.com/sign-up";
 
         if (user.password === user.confirmPassword) {
             setLoading(true);
